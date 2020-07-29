@@ -27,6 +27,10 @@ public class BridgeSelfDefineConfigDemo {
         ConfigFactory.init(
             ConfigFactory.getBridgeConfigManager("application-self-define.conf"),
             selfDefineDeviceConfigManager);
+        
+        // add new BridgeBootstrap
+        
+        bridgeBootstrap = new BridgeBootstrap();
 
         bridgeBootstrap.bootstrap(new DownlinkChannelHandler() {
             @Override
